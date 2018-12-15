@@ -4,6 +4,7 @@ public class Program
 {
 	public static void Main()
 	{
+	int x = 1;
 	int Time1st = 0;
 	int Time2nd = 0;
 	int Time3rd = 0;
@@ -17,6 +18,8 @@ public class Program
 	string Name2 = "";
 	string Name3 = "";
 	
+	while(x > 0)
+	{
 	Console.WriteLine("Enter 1st surname");
 	Name1 = Console.ReadLine();
 	Console.WriteLine("Enter 1st time");
@@ -66,5 +69,8 @@ public class Program
 	Console.WriteLine("1" + "  | Surname: " + Name1 + "  | Time:  " + Time1st + "   | Pay:  " + Pay1st + "  | PayAll:   " + PayAll1st);
 	Console.WriteLine("2" + "  | Surname: " + Name2 + "  | Time:  " + Time2nd + "   | Pay:  " + Pay2st + "  | PayAll:   " + PayAll2st);
 	Console.WriteLine("3" + "  | Surname: " + Name3 + "  | Time:  " + Time3rd + "   | Pay:  " + Pay3st + "  | PayAll:   " + PayAll3st);
+	Console.WriteLine("\n if you want to try again write 1, else write 0");
+	x = Convert.ToInt32(Console.ReadLine());
+	}
 	}
 }
