@@ -2,8 +2,7 @@ using System;
 using System.IO;
 
 public class Program
-{
-	public static void Main()
+{	public static void Main()
 	{
 	int x = 1;
 	int Time1st = 0;
@@ -18,9 +17,7 @@ public class Program
 	string Name1 = "";
 	string Name2 = "";
 	string Name3 = "";
-	string path = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
-	string filename = "wtf";
-	string extension = ".txt";
+	string path = @"C:/File.txt";
 
 	while(x > 0)
 	{
@@ -74,18 +71,18 @@ public class Program
 	Console.WriteLine("2" + "  | Surname: " + Name2 + "  | Time:  " + Time2nd + "   | Pay:  " + Pay2st + "  | PayAll:   " + PayAll2st);
 	Console.WriteLine("3" + "  | Surname: " + Name3 + "  | Time:  " + Time3rd + "   | Pay:  " + Pay3st + "  | PayAll:   " + PayAll3st);
 		
-	if (!File.Exists(path+filename+extension))
+	if (!File.Exists(path))
 {
-    File.Create(path+filename+extension);
-    TextWriter tw = new StreamWriter(path+filename+extension);
+    File.Create(path);
+    TextWriter tw = new StreamWriter(path);
 	tw.WriteLine("1" + "  | Surname: " + Name1 + "  | Time:  " + Time1st + "   | Pay:  " + Pay1st + "  | PayAll:   " + PayAll1st);
 	tw.WriteLine("2" + "  | Surname: " + Name2 + "  | Time:  " + Time2nd + "   | Pay:  " + Pay2st + "  | PayAll:   " + PayAll2st);
 	tw.WriteLine("3" + "  | Surname: " + Name3 + "  | Time:  " + Time3rd + "   | Pay:  " + Pay3st + "  | PayAll:   " + PayAll3st);
     tw.Close();
 }
-	else if (File.Exists(path+filename+extension))
+	else if (File.Exists(path))
 {
-    TextWriter tw = new StreamWriter(path+filename+extension);
+    TextWriter tw = new StreamWriter(path);
     tw.WriteLine("Next try");
 	tw.WriteLine("1" + "  | Surname: " + Name1 + "  | Time:  " + Time1st + "   | Pay:  " + Pay1st + "  | PayAll:   " + PayAll1st);
 	tw.WriteLine("2" + "  | Surname: " + Name2 + "  | Time:  " + Time2nd + "   | Pay:  " + Pay2st + "  | PayAll:   " + PayAll2st);
