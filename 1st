@@ -14,12 +14,12 @@ public class Program
 	int PayAll1st = 0;
 	int PayAll2st = 0;
 	int PayAll3st = 0;
-	while(x > 0)
-	{
 	string Name1 = "";
 	string Name2 = "";
 	string Name3 = "";
 	
+	while(x > 0)
+	{
 	Console.WriteLine("Enter 1st surname");
 	Name1 = Console.ReadLine();
 	Console.WriteLine("Enter 1st time");
